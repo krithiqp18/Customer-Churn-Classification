@@ -1,0 +1,72 @@
+<html>
+<head>
+    <title>Customer Churning Prediction</title>
+</head>
+<body>
+    <h1>Customer Churning Prediction</h1>
+    <form action="/prediction" method="post">
+       
+        
+        <label for="account_length">Account Length:</label>
+        <input type="number" name="account_length" id="account_length"><br>
+        
+        <label for="area_code">Area Code:</label>
+        <input type="number" name="area_code" id="area_code"><br>
+        
+        
+        <label for="international_plan">Int'l Plan:</label>
+        <input type="text" name="international_plan" id="international_plan"><br>
+        
+        <label for="vmail_plan">VMail Plan:</label>
+        <input type="text" name="vmail_plan" id="vmail_plan"><br>
+        
+        <label for="vmail_message">VMail Message:</label>
+        <input type="number" name="vmail_message" id="vmail_message"><br>
+        
+        <label for="day_mins">Day Mins:</label>
+        <input type="number" name="day_mins" id="day_mins"><br>
+        
+        <label for="day_calls">Day Calls:</label>
+        <input type="number" name="day_calls" id="day_calls"><br>
+        
+        <label for="day_charge">Day Charge:</label>
+        <input type="number" name="day_charge" id="day_charge"><br>
+        
+        <label for="eve_mins">Eve Mins:</label>
+        <input type="number" name="eve_mins" id="eve_mins"><br>
+        
+        <label for="eve_calls">Eve Calls:</label>
+        <input type="number" name="eve_calls" id="eve_calls"><br>
+        
+        <label for="eve_charge">Eve Charge:</label>
+        <input type="number" name="eve_charge" id="eve_charge"><br>
+        
+        <label for="night_mins">Night Mins:</label>
+        <input type="number" name="night_mins" id="night_mins"><br>
+        
+        <label for="night_calls">Night Calls:</label>
+        <input type="number" name="night_calls" id="night_calls"><br>
+        
+        <label for="night_charge">Night Charge:</label>
+        <input type="number" name="night_charge" id="night_charge"><br>
+        
+        <label for="intl_mins">Intl Mins:</label>
+        <input type="number" name="intl_mins" id="intl_mins"><br>
+        
+        <label for="intl_calls">Intl Calls:</label>
+        <input type="number" name="intl_calls" id="intl_calls"><br>
+        
+        <label for="intl_charge">Intl Charge:</label>
+        <input type="number" name="intl_charge" id="intl_charge"><br>
+        
+        <label for="custserv_calls">CustServ Calls:</label>
+        <input type="number" name="custserv_calls" id="custserv_calls"><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction_text %}
+        <h2>Prediction: {{ prediction_text }}</h2>
+    {% endif %}
+</body>
+</html>
